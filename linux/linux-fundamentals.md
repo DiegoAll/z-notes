@@ -2,6 +2,8 @@
 
 
     /etc/shell
+    chsh -s /bin/bash  (Cambiar la shell de un usuario)
+  
 
 
 bas, rbash (restricted bash)
