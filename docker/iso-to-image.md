@@ -69,22 +69,26 @@ docker images
 
 
 
-sudo unsquashfs -f -d unsquashfs/ rootfs/casper/filesystem.squashfs
-sudo tar -C unsquashfs -c . | docker import - IMAGENAME/TAG
+    sudo unsquashfs -f -d unsquashfs/ rootfs/casper/filesystem.squashfs
+    sudo tar -C unsquashfs -c . | docker import - IMAGENAME/TAG
+
 
 DIEGO minimal.squashfs
 
-sudo unsquashfs -f -d unsquashfs/ /home/diegoall/rootfs/casper/minimal.standard.squashfs
+    sudo unsquashfs -f -d unsquashfs/ /home/diegoall/rootfs/casper/minimal.standard.squashfs
 
 
-unsquashfs -f -d unsquashfs/ /home/diegoall/rootfs/casper/minimal.standard.squashfs  FUNCIONO
-tar -C unsquashfs -c . | docker import - diegoall/ubuntu-24.04-desktop-amd64.iso:0.0.1   FUNCIONO
+    unsquashfs -f -d unsquashfs/ /home/diegoall/rootfs/casper/minimal.standard.squashfs  FUNCIONO
+    tar -C unsquashfs -c . | docker import - diegoall/ubuntu-24.04-desktop-amd64.iso:0.0.1   FUNCIONO
+
+    sudo unsquashfs -f -d unsquashfs/ /home/diegoall/rootfs/casper/minimal.squashfs
 
 
 filesystem.squashfs
 
 
 $ docker run -it -d --name ubuntu24 -h ubuntu-from-iso diegoall/ubuntu-24.04-desktop-amd64.iso:0.0.1
+docker run -it -d --name ubuntu24trin -h ubuntu-from-iso diegoall/ubuntu-24.04-desktop-amd64.iso:0.0.2
 
 docker run -it --name falco-workshop -h training diegoall1990/falco-workshop:tagname
 
@@ -96,17 +100,38 @@ RESUMEN
 
         mkdir rootfs unsquashfs
 
+        mkdir -p /home/diegoall/rootfs
+        mkdir -p /home/diegoall/unsquashfs
+
         sudo mount -o loop /home/diegoall/FALCO/falco-workshop/ubuntu-24.04-desktop-amd64.iso /home/diegoall/rootfs
 
-        unsquashfs -f -d unsquashfs/ /home/diegoall/rootfs/casper/minimal.standard.squashfs
+        root@pho3nix:/home/diegoall# mount -o loop /home/diegoall/FALCO/falco-workshop/ubuntu-24.04-desktop-amd64.iso /home/diegoall/rootfs
+        mount: /home/diegoall/rootfs: WARNING: source write-protected, mounted read-only.
+
+        cd casper
+
+        unsquashfs -f -d unsquashfs/ /home/diegoall/rootfs/casper/minimal.squashfs
         
         tar -C unsquashfs -c . | docker import - diegoall/ubuntu-24.04-desktop-amd64.iso:0.0.1
+        tar -C unsquashfs -c . | docker import - diegoall/ubuntu-24.04-desktop-amd64:0.0.2
+        
+
+SI SE LOGRA CREAR LA IMAGEN, PERO NO LEVANTA NO TIENE BINARIOS PARA TENER EL COMANDO DE EJECUCION PRINCIPAL. /bin/bash
 
 
-SI SE LOGRA CREAR LA IMAGEN, PERO NO LEVANTA NO TIENE BINARIOS PARA TENER EL COMANDO DE EJECUCION PRINCIPAL.
+Ahora si levanta:
+
+    docker run -it diegoall/ubuntu-24.04-desktop-amd64:0.0.2 /bin/bash
+
+El nombre no debe tener *.iso sino no funciona no se porque.
+
+    docker run -it -d --name ubuntu24-recreated -h ubuntufromiso diegoall/ubuntu-24.04-desktop-amd64:0.0.2
 
 
+Remover por si se pega
 
+    losetup -a | grep /dev/loop33
+    losetup -d /dev/loop33
 
 root@pho3nix:/home/diegoall/rootfs/ubuntu# docker run -it diegoall/ubuntu-24.04-desktop-amd64.iso:0.0.1 /bin/bash
 docker: Error response from daemon: failed to create task for container: failed to create shim task: OCI runtime create failed: runc create failed: unable to start container process: exec: "/bin/bash": stat /bin/bash: no such file or directory: unknown.
@@ -115,6 +140,10 @@ docker: Error response from daemon: failed to create task for container: failed 
 SERA QUE EL MINIMAL NO LO TIENE??
 
 USAR LA MAS COMPLETA !!
+
+
+
+
 
 O POR ACA HAY UN PASQUIN QUE HACE ESO CON KALI
 
@@ -155,3 +184,40 @@ docker run --rm -ti --shm-size=2g --device=/dev/net/tun --sysctl net.ipv6.conf.a
 
 
 https://discuss.linuxcontainers.org/
+
+
+
+RECORDAR QUE SE EXTRAE DE LA ISO EN LA CARPETA SQUASHFS Y SE PUEDE MONTAR PARA ACCEDER A ELLA Y MODIFICAR LOS ARCHIVOS DEL SISTEMA
+
+Dentro de /home/diegoall/unsquashfs
+
+ 2004  mount --bind /dev /home/diegoall/unsquashfs/dev
+ 2005  mount
+ 2006  mount --bind /sys /home/diegoall/unsquashfs/sys
+ 2007  mount --bind /proc /home/diegoall/unsquashfs/proc
+ 2008  mount --bind /run /home/diegoall/unsquashfs/run
+
+
+chroot /home/diegoall/unsquashfs/
+
+
+Entrar al chroot
+
+Como distinguir si estoy en el anfitrion puede ser dificil pero.. con mount
+
+
+    root@pho3nix:/# mount
+    udev on /dev type devtmpfs (rw,nosuid,relatime,size=32686668k,nr_inodes=8171667,mode=755,inode64)
+    sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
+    proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+    tmpfs on /run type tmpfs (rw,nosuid,nodev,noexec,relatime,size=6545068k,mode=755,inode64)
+
+
+    cat /proc/1/cgroup
+
+    root@pho3nix:/# df /
+    Filesystem     1K-blocks      Used Available Use% Mounted on
+    -              502674496 100728640 376337972  22% /
+
+    
+
