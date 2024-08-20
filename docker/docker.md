@@ -25,6 +25,9 @@ guido
 
     docker exec -it -u pepe 52753da1adc0 /bin/bash
 
+    docker exec -it <nombre_del_contenedor> bash -c "echo 'pepe ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
+
+
 
     
     
@@ -33,6 +36,9 @@ guido
     docker inspect diegoall/ubuntu-18.04-desktop-amd64:0.0.1
 
     docker commit
+
+    docker tag <IMAGE ID> <NEW_REPOSITORY>:<NEW_TAG>
+
 
 
 
@@ -48,6 +54,8 @@ guido
 Al parecer solo funciona dive con imagenes con imagenes que estan en un registry. Intentar subirla luego.
 
 
+
+    docker commit falco-workshop diegoall1990/falco-workshop-vuln:0.0.1
 
 
 

@@ -24,8 +24,10 @@ subshell echo "$(</etc/shadow)"
 vaina del mount (Escalar")
 
 
+ whiptail  (cuadros de dialogo)
 
-## Install packages
+
+## Install packages (apt-utils)
 
 - Instalar aplicaciones
 
@@ -39,7 +41,9 @@ vaina del mount (Escalar")
     dpkg --get-selections  Ver paquetes instalados en el sistema
 
     
+## Montajes
 
+    m-tools
 
 
 ## Privileges

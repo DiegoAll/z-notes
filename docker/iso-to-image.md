@@ -244,7 +244,22 @@ root@ubuntufromiso:/# dpkg --get-selections | wc -l
 1783
 
 
+sudo apt remove --purge gnome* kde* xfce* lxde* mate* cinnamon* \
+    g++ autoconf automake libtool \
+    alsa* pulseaudio* gstreamer* vlc* xplayer* \
+    *doc
 
+apt-get remove --purge remmina remmina-common \
+remmina-plugin-rdp:amd64 remmina-plugin-secret:amd64 \
+remmina-plugin-vnc:amd64
+
+Sacar del archivo quedan todos los lib deben ser los mas pesados.
+
+root@victim:/# dpkg --get-selections | wc -l
+995
+
+
+    docker commit falco-workshop diegoall1990/falco-workshop-vuln:0.0.1
 
 
 
