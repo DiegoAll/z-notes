@@ -29,6 +29,8 @@ vaina del mount (Escalar")
 
 - Instalar aplicaciones
 
+    apt-get autoremove
+    apt-get clean
     apt-get --only-upgrade install sudo
     hay uno con mark para que no actualice cierto paquete.
     apt install -fy ./rustdesk-1.2.7-x86_64.deb (cuando falla dpkg -i)

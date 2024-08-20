@@ -32,7 +32,20 @@ guido
 
     docker inspect diegoall/ubuntu-18.04-desktop-amd64:0.0.1
 
-    docker commit 
+    docker commit
+
+
+
+    dive docker-images
+
+    root@pho3nix:/home/diegoall/courses/z-notes# dive diegoall/ubuntu-18.04-desktop-amd64:0.0.1
+    Image Source: docker://diegoall/ubuntu-18.04-desktop-amd64:0.0.1
+    Fetching image... (this can take a while for large images)
+    Handler not available locally. Trying to pull 'diegoall/ubuntu-18.04-desktop-amd64:0.0.1'...
+    cannot fetch image
+    cannot find docker client executable
+
+Al parecer solo funciona dive con imagenes con imagenes que estan en un registry. Intentar subirla luego.
 
 
 

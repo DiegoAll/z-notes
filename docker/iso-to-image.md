@@ -60,17 +60,6 @@ docker images
 
 
 
-## References
-
-    https://www.youtube.com/watch?v=3lHGwrshnb4&t=146s
-
-    https://www.techrepublic.com/videos/how-to-convert-an-iso-to-a-docker-image/
-
-    https://dev.to/sofianehamlaoui/convert-iso-images-to-docker-images-18jh
-
-
-    https://syst3mfailure.io/sudo-heap-overflow/  (MUY PRO)
-
 
     sudo unsquashfs -f -d unsquashfs/ rootfs/casper/filesystem.squashfs
     sudo tar -C unsquashfs -c . | docker import - IMAGENAME/TAG
@@ -258,6 +247,20 @@ root@ubuntufromiso:/# dpkg --get-selections | wc -l
 
 
 
-https://syst3mfailure.io/sudo-heap-overflow/
+
+
+
+## References
+
+    https://www.youtube.com/watch?v=3lHGwrshnb4&t=146s
+
+    https://www.techrepublic.com/videos/how-to-convert-an-iso-to-a-docker-image/
+
+    https://dev.to/sofianehamlaoui/convert-iso-images-to-docker-images-18jh
+
+
+    https://syst3mfailure.io/sudo-heap-overflow/  (MUY PRO)
+
+    https://syst3mfailure.io/sudo-heap-overflow/
 
 
