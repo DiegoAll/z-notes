@@ -4,6 +4,9 @@
 
 > casper file
 
+> SI fuera debian /live/filesystem.squashfs
+
+
 https://www.techrepublic.com/videos/how-to-convert-an-iso-to-a-docker-image/
 
 
@@ -63,10 +66,10 @@ docker images
 
     https://www.techrepublic.com/videos/how-to-convert-an-iso-to-a-docker-image/
 
+    https://dev.to/sofianehamlaoui/convert-iso-images-to-docker-images-18jh
 
 
-
-
+    https://syst3mfailure.io/sudo-heap-overflow/  (MUY PRO)
 
 
     sudo unsquashfs -f -d unsquashfs/ rootfs/casper/filesystem.squashfs
@@ -104,6 +107,7 @@ RESUMEN
         mkdir -p /home/diegoall/unsquashfs
 
         sudo mount -o loop /home/diegoall/FALCO/falco-workshop/ubuntu-24.04-desktop-amd64.iso /home/diegoall/rootfs
+        sudo mount -o loop /home/diegoall/FALCO/falco-workshop/ubuntu-18.04-desktop-amd64.iso /home/diegoall/rootfs
 
         root@pho3nix:/home/diegoall# mount -o loop /home/diegoall/FALCO/falco-workshop/ubuntu-24.04-desktop-amd64.iso /home/diegoall/rootfs
         mount: /home/diegoall/rootfs: WARNING: source write-protected, mounted read-only.
@@ -114,6 +118,9 @@ RESUMEN
         
         tar -C unsquashfs -c . | docker import - diegoall/ubuntu-24.04-desktop-amd64.iso:0.0.1
         tar -C unsquashfs -c . | docker import - diegoall/ubuntu-24.04-desktop-amd64:0.0.2
+
+
+        tar -C unsquashfs -c . | docker import - diegoall/ubuntu-18.04-desktop-amd64:0.0.1
         
 
 SI SE LOGRA CREAR LA IMAGEN, PERO NO LEVANTA NO TIENE BINARIOS PARA TENER EL COMANDO DE EJECUCION PRINCIPAL. /bin/bash
@@ -127,6 +134,13 @@ El nombre no debe tener *.iso sino no funciona no se porque.
 
     docker run -it -d --name ubuntu24-recreated -h ubuntufromiso diegoall/ubuntu-24.04-desktop-amd64:0.0.2
 
+    docker run -it -d --name ubuntu18-recreated -h ubuntufromiso diegoall/ubuntu-18.04-desktop-amd64:0.0.1
+
+    docker run -it -d --name ubuntu-recreated -h ubuntuiso diegoall/ubuntu-24.04-desktop-amd64.iso:0.0.1 /bin/bash
+
+    docker run -it -d --name ubuntu-recreated -h ubuntuiso diegoall/ubuntu-24.04-desktop-amd64:0.0.2
+
+docker: Error response from daemon: no command specified.  (agregar /bin/bash)
 
 Remover por si se pega
 
@@ -220,4 +234,30 @@ Como distinguir si estoy en el anfitrion puede ser dificil pero.. con mount
     -              502674496 100728640 376337972  22% /
 
     
+
+debian
+
+
+
+En la distribución de Debian, específicamente en la imagen ISO que mencionas (debian-10.7.0-amd64-DVD-1.iso), el archivo filesystem.squashfs suele encontrarse en las versiones live de Debian, ya que es una imagen comprimida del sistema de archivos que se utiliza para cargar el entorno live.
+
+Sin embargo, la imagen DVD-1.iso de Debian que mencionas no es una versión live, sino una imagen de instalación. En este tipo de imágenes, no encontrarás un archivo filesystem.squashfs porque no está diseñado para cargarse en un entorno live.
+
+
+Pailas segun esto en topic muy pro no se puede reproducir
+
+
+### Reducir tamaño de la imagen convertida
+
+Intentar eliminar paquetes innecesarios
+
+root@ubuntufromiso:/# dpkg --get-selections | wc -l
+1783
+
+
+
+
+
+https://syst3mfailure.io/sudo-heap-overflow/
+
 

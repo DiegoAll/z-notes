@@ -18,3 +18,24 @@ load
 guido
 
 
+
+    docker exec -it -u pepe 52753da1adc0 /bin/bash
+
+    docker exec -it 52753da1adc0 passwd pepe
+
+    docker exec -it -u pepe 52753da1adc0 /bin/bash
+
+
+    
+    
+    docker cp <container_id>:/paquetes_instalados.txt /ruta/local/
+
+    docker inspect diegoall/ubuntu-18.04-desktop-amd64:0.0.1
+
+    docker commit 
+
+
+
+
+
+
