@@ -63,6 +63,13 @@ scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragm
 
     ldd /usr/bin/sudo
 
+
+## Environment variables
+
+
+    source ~/.bashrc
+
+
     
 ## Montajes
 
