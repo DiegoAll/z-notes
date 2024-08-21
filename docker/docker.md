@@ -58,5 +58,8 @@ Al parecer solo funciona dive con imagenes con imagenes que estan en un registry
     docker commit falco-workshop diegoall1990/falco-workshop-vuln:0.0.1
 
 
+    docker tag dd8cf0208d18 diegoall1990/falco-workshop-vuln:0.0.1
+
+
 
 

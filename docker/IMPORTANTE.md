@@ -7,5 +7,5 @@ Ahora que se puede construir imagenes docker a partir de isos. Se puede probar l
 - Tema del kernel headers para LKM en Kubernetes, probarlo en maquina virtual y esta misma convertirla a container (luego alivianarla).
 - Probar vulnerabilidades antiguas.
 - Pendiente extraer componentes o binarios legacys de imagenes para no crear imagen entera. Ej. D Ocean sudo.
-- 
+- ya viene con x11-common para poder sacar las reglas de falco de salida estandar
 

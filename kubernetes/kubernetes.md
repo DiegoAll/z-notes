@@ -3,6 +3,89 @@
 **buscar loc cheatsheets viejos**
 
 
+#
+
+## Contexts
+
+    kubectl config
+
+    kubectl config current-context
+    kubectl config get-contexts
+    kubectl config set-context <context-name> --namespace=<namespace-name> --user=<user-name> --cluster=<cluster-name>  Create new context
+    kubectl config use-context <context-name> Switching Kubernetes Contexts
+    kubectl config delete-context <context-name> Delete a Kubernetes Context
+
+## Nodes
+
+    kubectl get node  (Ver nodos)
+    kubectl get no -o yaml
+    kubectl get no -o wide
+    kubectl describe node
+    kubectl top node
+
+## Pods
+
+    kubectl get pod -o wide (Permite ver las IPs)
+    kubectl get po --shiw-labels
+
+
+## Namespaces
+
+
+
+
+
+## Deployments
+
+
+
+## Services
+
+
+
+## DaemonSets
+
+
+
+## Events
+
+
+
+## Logs
+
+
+
+
+## Service Accounts
+
+
+
+## ReplicaSets
+
+
+## Roles
+
+
+## Secerts
+
+
+## ConfigMaps
+
+
+## Ingress
+
+
+## Persistent Volume
+
+
+## Persistent Volume Claim
+
+
+## 
+
+
+
+
     kubectl exec -it  jenkins-app-2843651954-4zqdp  -- /bin/bash
 
 
