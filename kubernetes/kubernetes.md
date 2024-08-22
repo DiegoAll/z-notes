@@ -26,7 +26,7 @@
 ## Pods
 
     kubectl get pod -o wide (Permite ver las IPs)
-    kubectl get po --shiw-labels
+    kubectl get po --show-labels
 
 
 ## Namespaces

@@ -19,3 +19,7 @@
     killall -u username
 
     kill -9
+
+
+
+    /bin/bash -c (interactive shell) proceso hijo recordar EN el mismo contexto

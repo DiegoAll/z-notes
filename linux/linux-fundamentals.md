@@ -13,7 +13,11 @@
 
     /etc/shell
     chsh -s /bin/bash  (Cambiar la shell de un usuario)
+
+    /bin/bash -c (interactive shell)
   
+
+    El raro para el entorno cuando se monta un File system como un virtual enviroment
 
 
 bas, rbash (restricted bash)
@@ -24,7 +28,7 @@ subshell echo "$(</etc/shadow)"
 vaina del mount (Escalar")
 
 
- whiptail  (cuadros de dialogo)
+whiptail  (cuadros de dialogo)
 
 
 ## Install packages (apt-utils)
@@ -66,7 +70,7 @@ scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragm
 
 ## Environment variables
 
-
+    export PATH=$PATH:/usr/local/go/bin
     source ~/.bashrc
 
 
@@ -75,8 +79,12 @@ scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragm
 
     m-tools
 
+    sudo mount -o bind /bin/sh /bin/mount
+
 
 ## Privileges
 
+    Toamr del whatsapp
 
+    NOPASSWD  (sudoers)
 
