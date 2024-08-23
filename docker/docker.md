@@ -85,6 +85,6 @@ Extraidos de csysdig
     docker unpause
     docker wait
 
-
+    docker tag ...
 
 

@@ -49,6 +49,9 @@ Extraer version de paquete
     sudo apt-get install dpkg-repack
     dpkg-repack sudo
 
+    dpkg -S /usr/lib/x86_64/libgtk-3-common.so
+
+
 
     dpkg --get-selections  Ver paquetes instalados en el sistema
 scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragmatic 
@@ -87,4 +90,12 @@ scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragm
     Toamr del whatsapp
 
     NOPASSWD  (sudoers)
+
+## Grep
+
+    grep -B 3 -A 5 "Disallowed SSH Connection" falco_rules.yaml
+    zgrep
+
+
+##
 

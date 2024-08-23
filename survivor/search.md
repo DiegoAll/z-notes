@@ -3,6 +3,10 @@
 
     grep.app
     command-not-found.com   (Buscar nombres de comandos)
+    https://explainshell.com/
+
+
+
 
     se colectan de todos los clusters que tengan el parametor id
 

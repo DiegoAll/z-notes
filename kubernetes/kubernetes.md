@@ -29,6 +29,8 @@
     kubectl get po --show-labels
 
 
+    kubectl run -i --tty --privileged --image diegoall1990/falco-workshop:0.0.1 vistima
+
 ## Namespaces
 
 

@@ -19,3 +19,7 @@ Monitoring
     nload
 
     bmon
+
+    curl ifconfig.me
+
+    
