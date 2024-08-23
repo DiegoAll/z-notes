@@ -36,4 +36,69 @@ En GCP no aparece
     ii  linux-headers-6.1.0-23-common         6.1.99-1                       all          Common header files for Linux 6.1.0-23
     ii  linux-headers-amd64                   6.1.99-1                       amd64        Header files for Linux amd64 configuration (meta-package)
 
- 
+ # sysdig
+
+## Instalacion como binario
+
+
+https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux
+
+
+https://www.youtube.com/watch?v=UJ4wVrbP-Q8   (Santo grial)
+
+
+
+**Debe utilizarse con permisos de root para loder cargar el driver de captura (scap.ko)**
+
+    error opening device /dev/scap0. Make sure you have root credentials and that the scap module is loaded: Permission denied
+
+Validar que haya quedado instalado:
+
+    find /lib/modules/$(uname -r) -name scap.ko
+    find /lib/modules/$(uname -r) -type f -name '*.ko'
+
+Ver todos los events "supported fields") Al parecer hay mas info que en la web official.
+
+    sysdig -l 
+
+
+En caso de que ejecuten un comando:
+
+
+All the open system calls invoked by cat
+
+    $ sysdig proc.name=chromium and evt.type=open    (QUITAR EL OPEN)
+
+
+Print the name of the files opened by cat
+
+    $ sysdig -p"%evt.arg.name" proc.name=chromium and evt.type=open
+
+    ./sysdig proc.name=cat
+
+    sysdig proc.name=cat or proc.name=vi
+
+    sysdig proc.    kubectl cp ...name!=cat and evt.type=open
+
+
+FABRICIO, buscar el proceso mas algun syscall malicioso o el binario.
+
+
+## csysdig
+
+
+Es mas facil con csysdig, tiene una pseudo interfaz grafica
+
+
+
+# Referencias
+
+
+    https://github.com/annulen/sysdig-wiki/blob/master/Sysdig-User-Guide.md
+
+
+# Summary
+
+
+Funciono en docker en equipo personal como binario y como contenedor.
+No funciono en GCP

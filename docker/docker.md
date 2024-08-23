@@ -1,5 +1,17 @@
+# Docker
 
 
+    # DiegoAll FalcoxLab Docker Image
+    # 2022
+    #
+    # Build the image with:
+    #   $ docker build -t diegoall1990/falco-workshop .
+    #
+    # Start a container for the first time from a built image with:
+    #   $ docker run -it --name <name> -h <hostname> diegoall1990/falco-workshop:tagname
+    #   $ docker run -it --name falco-workshop -h training diegoall1990/falco-workshop:tagname
+
+trin
 
     docker build --no-cache -t diegoall1990/falco-workshop:0.0.1 .
 
@@ -59,6 +71,19 @@ Al parecer solo funciona dive con imagenes con imagenes que estan en un registry
 
 
     docker tag dd8cf0208d18 diegoall1990/falco-workshop-vuln:0.0.1
+
+
+
+Extraidos de csysdig
+
+    docker attach
+    docker inspect
+    docker kill
+    docker logs
+    docker stop
+    docker pause
+    docker unpause
+    docker wait
 
 
 
