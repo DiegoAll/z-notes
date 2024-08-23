@@ -8,7 +8,9 @@
     sudo pkill -u mister Finalizar los procesos del usuario mister
 
 
+    pstree
 
+    ps -p <PID> -o pid,ppid,cmd,%mem,%cpu
 
 
 
