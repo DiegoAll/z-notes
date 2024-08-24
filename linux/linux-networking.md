@@ -22,4 +22,6 @@ Monitoring
 
     curl ifconfig.me
 
+    ip addr
+    ip a
     

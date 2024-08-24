@@ -38,9 +38,16 @@ Execution:
 
     npm i express
 
-    
 
 
+### Plugins
+
+Instalar ESLint desde las extensiones de VSCode.
+
+
+### References
+
+<https://expressjs.com/>
 
 
 

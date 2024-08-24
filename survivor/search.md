@@ -1,6 +1,4 @@
 
-
-
     grep.app
     command-not-found.com   (Buscar nombres de comandos)
     https://explainshell.com/
