@@ -11,4 +11,6 @@ Generalmente las imagenes viejas ya estan parchadas, como que la legacy de verda
 Toca convertirlas y reducir su tamaño.
 
 
+https://cdimage.ubuntu.com/
 
+http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/
