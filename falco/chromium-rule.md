@@ -42,7 +42,13 @@ F6 Dig Ver las syscalls para corroborar que esta pasando.
 
 
 
+- Ben comandos v8 (es lo mismo que entrar modo developer o algo asi)
 
+    https://v8.dev/docs
+
+    how works
+    
+    https://medium.com/@rodcast/v8-javascript-engine-understanding-javascript-api-requests-and-responses-in-the-data-fetching-311481bdae6a
 
 
 
