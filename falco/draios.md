@@ -84,6 +84,13 @@ Print the name of the files opened by cat
 FABRICIO, buscar el proceso mas algun syscall malicioso o el binario.
 
 
+sysdig -X "evt.type in (write, sendto, read, recvfrom) and fd.type in (ipv4, ipv6) \
+    and proc.name=java" \
+    -p"%fd.name (%evt.type, %evt.buflen bytes) %evt.buffer"
+
+
+
+
 ## csysdig
 
 
@@ -95,6 +102,10 @@ Es mas facil con csysdig, tiene una pseudo interfaz grafica
 
 
     https://github.com/annulen/sysdig-wiki/blob/master/Sysdig-User-Guide.md
+    
+    https://github.com/draios/sysdig/wiki/How-to-Install-Sysdig-for-Linux
+
+    https://github.com/annulen/sysdig-wiki/blob/master/Chisels-User-Guide.md
 
 
 # Summary

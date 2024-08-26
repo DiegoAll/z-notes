@@ -19,6 +19,9 @@
     ssh -T git@github.com
 
 
+    git reset --hard HEAD
+
+
 
 ## Referencias
 

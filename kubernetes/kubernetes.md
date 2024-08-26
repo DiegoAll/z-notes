@@ -30,6 +30,8 @@
 
 
     kubectl run -i --tty --privileged --image diegoall1990/falco-workshop:0.0.1 vistima
+    kubectl run -i --tty --privileged --image ubuntu:22.04 --name ubuntu-container
+
 
 ## Namespaces
 
