@@ -77,6 +77,13 @@ scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragm
     source ~/.bashrc
 
 
+    printenv  (ver variables de entorno del sistema)
+    set
+    export
+    unset
+    source
+
+
     
 ## Montajes
 

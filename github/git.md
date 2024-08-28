@@ -21,6 +21,9 @@
 
     git reset --hard HEAD
 
+    git ls-remote --heads origin  Ver ramas disponibles en el repositorio remoto
+
+
 
 
 ## Referencias
