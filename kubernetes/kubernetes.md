@@ -33,6 +33,9 @@
     kubectl run -i --tty --privileged --image ubuntu:22.04 --name ubuntu-container
 
 
+
+    kubectl top pod --all-namespaces | sort --reverse --key 3 --numeric
+
 ## Namespaces
 
 

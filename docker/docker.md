@@ -88,3 +88,8 @@ Extraidos de csysdig
     docker tag ...
 
 
+
+
+
+    docker info
+
