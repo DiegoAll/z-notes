@@ -23,7 +23,7 @@
 
     git ls-remote --heads origin  Ver ramas disponibles en el repositorio remoto
 
-
+    Squash and Merge
 
 
 ## Referencias
