@@ -45,6 +45,9 @@ whiptail  (cuadros de dialogo)
     apt-mark hold sudo
     apt-get install --reinstall sudo
 
+    dpkg -l | grep linux-headers
+
+
 Extraer version de paquete
     sudo apt-get install dpkg-repack
     dpkg-repack sudo
@@ -104,5 +107,27 @@ scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragm
     zgrep
 
 
-##
+## Monitoring
 
+
+    htop
+    top
+    iotop ()
+    iftop  (estado de la red)
+
+    vmstat 1  (ver memoria)
+
+
+    strace -p <PID> (rastrear llamadas al sistema)
+    ltrace
+ 
+
+## Compression tools
+
+
+    tar xzvf
+    untar
+    zip 
+    bzcat
+    zcat
+    bzmore

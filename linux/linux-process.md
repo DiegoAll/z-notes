@@ -1,5 +1,6 @@
 # Procesos
 
+    ps -ef
 
     ps -x
 
@@ -16,6 +17,11 @@
 
     estaba viendo en meli.udemy un curso comptia ahi hay varia data.
 
+    
+    pstree
+    psmisc (al parecer es para mac)
+
+    ps -p <PID> -o pid,ppid,cmd,%mem,%cpu
 
 
     killall -u username
