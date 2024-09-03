@@ -13,6 +13,9 @@
 
     ps -p <PID> -o pid,ppid,cmd,%mem,%cpu
 
+    pstack <pid>  (ver stack de un proceso)
+
+    perf stat <pid>
 
 
     estaba viendo en meli.udemy un curso comptia ahi hay varia data.

@@ -1,0 +1,8 @@
+# Cosas
+
+
+
+    spindump <pid>
+
+
+    
