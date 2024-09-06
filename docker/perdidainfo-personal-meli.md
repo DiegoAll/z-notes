@@ -26,3 +26,13 @@ mailhog/mailhog:latest
 diegoall1990/golang-crud-api:0.0.1
 diegoall1990/linux-clean-api-pg-db:0.0.1
 diegoall1990/ubuntux-lab:0.0.1
+
+
+root@pho3nix:/home/diegoall/courses/z-notes# ll /var/lib/docker/image/overlay2/repositories.json 
+-rw------- 1 root root 5375 ago 19 05:05 /var/lib/docker/image/overlay2/repositories.json
+
+
+https://stackoverflow.com/questions/26331651/how-can-i-backup-a-docker-container-with-its-data-volumes
+
+
+https://github.com/discordianfish/docker-backup

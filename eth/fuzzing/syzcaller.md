@@ -108,3 +108,38 @@ Notas finales
 Ajustes: Dependiendo de tu configuración y el hardware disponible, es posible que necesites ajustar los parámetros en tu archivo de configuración para optimizar el rendimiento.
 Monitoreo: Si planeas dejar Syzkaller ejecutándose por largos períodos, asegúrate de monitorear el uso de recursos del sistema y de revisar regularmente los logs generados.
 Con esto, deberías estar listo para comenzar a usar Syzkaller para encontrar vulnerabilidades en el kernel de Linux.
+
+
+
+en las dispoaotivas esta todo
+
+
+515  ll defconfig
+  516  apt-get install libncurses5-dev libncursesw5-dev
+  517  sudo apt-get update
+  518  clear
+  519  sudo apt-get install libncurses5-dev libncursesw5-dev
+  520  dpkg -L libncurses5-dev libncursesw5-dev
+  521  clear
+  522  ls
+  523  make menuconfig
+  524  sudo apt-get install flex
+  525  sudo apt-get install build-essential libssl-dev libelf-dev bison
+  526  dpkg -L flex bison build-essential libssl-dev libelf-dev pkg-config
+  527  ls
+  528  make menuconfig
+  529  which menuconfig
+  530  clear
+  531  make defconfig
+  532  more .config
+  533  make defconfig
+  534  clear
+  535  make menuconfig
+  536  make -j$(nproc)
+  537  ll
+  538  cp arch/x86/boot/bzImage /boot/vmlinuz-syzkaller
+  539  ll /boot/vmlinuz
+  540  rm -rf /boot/vmlinuz-syzkaller
+  541  ll /boot/vmlinuz
+  542  cp arch/x86_64/boot/bzImage /boot/vmlinuz-syzkaller
+  543  sudo update-grub

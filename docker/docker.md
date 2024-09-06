@@ -93,3 +93,23 @@ Extraidos de csysdig
 
     docker info
 
+
+
+    docker ps -a --filter "status=exited"
+
+
+Consultar el log de docker
+
+    journalctl -u docker.service
+
+
+Backup Containers
+
+
+back up docker images
+To back up docker images, use the docker save command that will produce a tar archive that can be used later on to create a new docker image with the docker load command.
+
+    docker save <>
+    docker load <>
+
+Reference: https://stackoverflow.com/questions/26331651/how-can-i-backup-a-docker-container-with-its-data-volumes
