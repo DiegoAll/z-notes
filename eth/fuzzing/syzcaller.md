@@ -143,3 +143,7 @@ en las dispoaotivas esta todo
   541  ll /boot/vmlinuz
   542  cp arch/x86_64/boot/bzImage /boot/vmlinuz-syzkaller
   543  sudo update-grub
+
+
+
+https://chatgpt.com/c/903c3a02-b3e5-4b1e-ad65-c20312a5ea76

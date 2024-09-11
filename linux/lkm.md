@@ -44,4 +44,6 @@ https://huichen-cs.github.io/course/CISC3320/20SP/tutorial/lnxkernelmodule.html 
 
 https://github.com/CERN-CERT/activity_klog (CERN)
 
+https://github.com/croemheld/lkm-rootkit
+
 
