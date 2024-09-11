@@ -13,3 +13,5 @@ El de IntelliJ
 
 
     ctrl +j Unir string en una linea
+
+    shift + tab (Mover bloque a la izquierda) 

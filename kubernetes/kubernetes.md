@@ -38,6 +38,9 @@
 
     kubectl top pod --all-namespaces | sort --reverse --key 3 --numeric
 
+
+    kubectl exec -it demo-falco -- sh -c "ls -al"
+
 ## Namespaces
 
 

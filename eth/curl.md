@@ -34,3 +34,6 @@ Incluir encabezados en la respuesta
 Mostrar el tiempo de conexión y otras métricas con -w
 
 
+https://gist.github.com/subfuzion/08c5d85437d5d4f00e58
+
+

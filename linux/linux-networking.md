@@ -25,3 +25,10 @@ Monitoring
     ip addr
     ip a
     
+
+## tcpdump
+
+
+    tcpdump -i eth0 -nn -e
+
+    
