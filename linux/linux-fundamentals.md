@@ -78,7 +78,10 @@ scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragm
 
     export PATH=$PATH:/usr/local/go/bin
     source ~/.bashrc
+    export x=5 ; echo $x (Actual process memory and child processes)
+    env
 
+    cat /etc/environment
 
     printenv  (ver variables de entorno del sistema)
     set

