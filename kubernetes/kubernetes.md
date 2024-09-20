@@ -41,6 +41,14 @@
 
     kubectl exec -it demo-falco -- sh -c "ls -al"
 
+
+    kubectl port-forward zapp 8080:8080
+
+    kubectl -c zapp -i -t (when the pod is running)  Attachear
+
+
+
+
 ## Namespaces
 
 
