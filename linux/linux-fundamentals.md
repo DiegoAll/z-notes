@@ -2,11 +2,18 @@
 
 
 
+
+
 ## Information
 
         arch
         lsb_release -a  version
         /cat/etc/issue version exacta del SO
+
+
+## Files
+
+    ls -lhai (inode)
 
 
 ## Shells
@@ -49,6 +56,7 @@ whiptail  (cuadros de dialogo)
 
 
 Extraer version de paquete
+
     sudo apt-get install dpkg-repack
     dpkg-repack sudo
 
@@ -57,7 +65,7 @@ Extraer version de paquete
 
 
     dpkg --get-selections  Ver paquetes instalados en el sistema
-scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragmatic 
+    scp sudo_1.8.21p2-3ubuntu1.6_amd64.deb usuario@otro_servidor:/ruta/destino pragmatic 
     sudo_1.8.21p2-3ubuntu1_amd64.deb  iso viejo
 
     docker cp <container_id>:/path/to/file/sudo_1.8.21p2-3ubuntu1_amd64.deb .

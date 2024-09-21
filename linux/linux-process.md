@@ -8,6 +8,9 @@
 
     sudo pkill -u mister Finalizar los procesos del usuario mister
 
+    pidof
+
+    ps -q 20075 -o command= | cat
 
     pstree
 
