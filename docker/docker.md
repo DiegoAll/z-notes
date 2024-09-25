@@ -11,12 +11,16 @@
     #   $ docker run -it --name <name> -h <hostname> diegoall1990/falco-workshop:tagname
     #   $ docker run -it --name falco-workshop -h training diegoall1990/falco-workshop:tagname
 
+    
+
 trin
 
     docker build --no-cache -t diegoall1990/falco-workshop:0.0.1 .
 
 
     docker run -d -it --net host --pid host --userns host --privileged --cap-add=ALL --name broken-cgroup1 ubuntu:22.04 sleep 36000
+
+    docker run --pid=host --privileged --name admin-container ubuntu:latest tail -f /dev/null
 
 
 
