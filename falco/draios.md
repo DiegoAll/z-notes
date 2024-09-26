@@ -97,6 +97,13 @@ sysdig -X "evt.type in (write, sendto, read, recvfrom) and fd.type in (ipv4, ipv
 Es mas facil con csysdig, tiene una pseudo interfaz grafica
 
 
+## Mac
+
+
+
+    brew install 
+
+
 
 # Referencias
 
