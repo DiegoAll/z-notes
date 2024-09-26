@@ -1,0 +1,77 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: falco-custom-lab
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: sysdig
+  namespace: falco-custom-lab
+spec:
+  selector:
+    matchLabels:
+      app: sysdig
+  template:
+    metadata:
+      labels:
+        app: sysdig
+    spec:
+      hostNetwork: true
+      hostPID: true
+      initContainers:
+      - name: scap-installer
+        image: docker.io/sysdig/scap-driver:latest  # Imagen que contiene el driver
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: modules
+          mountPath: /lib/modules
+      containers:
+      - name: sysdig
+        image: docker.io/sysdig/sysdig:latest
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - name: docker-sock
+          mountPath: /host/var/run/docker.sock
+        - name: dev
+          mountPath: /host/dev
+        - name: proc
+          mountPath: /host/proc
+        - name: boot
+          mountPath: /host/boot
+        - name: src
+          mountPath: /src
+        - name: modules
+          mountPath: /host/lib/modules
+        - name: usr
+          mountPath: /host/usr
+        - name: etc
+          mountPath: /host/etc
+        args: ["--capture", "all"]
+      volumes:
+      - name: docker-sock
+        hostPath:
+          path: /var/run/docker.sock
+      - name: dev
+        hostPath:
+          path: /dev
+      - name: proc
+        hostPath:
+          path: /proc
+      - name: boot
+        hostPath:
+          path: /boot
+      - name: src
+        hostPath:
+          path: /src
+      - name: modules
+        hostPath:
+          path: /lib/modules
+      - name: usr
+        hostPath:
+          path: /usr
+      - name: etc
+        hostPath:
+          path: /etc
