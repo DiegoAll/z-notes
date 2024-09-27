@@ -105,6 +105,8 @@ Extraer version de paquete
 
     sudo mount -o bind /bin/sh /bin/mount
 
+    cat /etc/mtab or cat /proc/mounts
+
 
 ## Privileges
 

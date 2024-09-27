@@ -24,11 +24,19 @@ Monitoring
 
     ip addr
     ip a
+    hostname -I
     
 
 ## tcpdump
 
 
     tcpdump -i eth0 -nn -e
+
+    
+
+
+## Connections
+
+    REVERSE_IP=$(hostname -I | tr -d " ")
 
     

@@ -101,7 +101,9 @@ Es mas facil con csysdig, tiene una pseudo interfaz grafica
 
 
 
-    brew install 
+    brew install sysdig
+
+En M1 aparece: 
 
 
 
@@ -120,3 +122,18 @@ Es mas facil con csysdig, tiene una pseudo interfaz grafica
 
 Funciono en docker en equipo personal como binario y como contenedor.
 No funciono en GCP
+
+
+sudo docker run -i -t --name draios --privileged --net=host \
+    -v /var/run/docker.sock:/host/var/run/docker.sock \
+    -v /dev:/host/dev \
+    -v /proc:/host/proc:ro \
+    -v /boot:/host/boot:ro \
+    -v /src:/src \
+    -v /lib/modules:/host/lib/modules:ro \
+    -v /usr:/host/usr:ro \
+    -v /etc:/host/etc:ro \
+    docker.io/sysdig/sysdig
+
+
+    docker run -i -t --name sysdig --privileged -v /var/run/docker.sock:/host/var/run/docker.sock -v /dev:/host/dev -v /proc:/host/proc:ro -v /boot:/host/boot:ro -v /lib/modules:/host/lib/modules:ro -v /usr:/host/usr:ro sysdig/sysdig

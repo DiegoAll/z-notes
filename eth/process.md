@@ -20,4 +20,12 @@ Leer variables de entorno
     strings /proc/$$/environ | grep -i kubernetes
 
 
-    
+
+    /proc/$pid/status
+
+
+
+
+kthreadd: Hilo de trabajo del kernel. Es un proceso fundamental del sistema operativo Linux. tambien conocido como el demonio del kernel. Su funcion principal es gestionar la creación y ejecución de hilos de trabajo dentro del nucleo del sistema.
+Son tareas que se ejecutan en el espacio de direcciones del nucleo del sistema. A diferencia de los procesos normales, estos hilos no están asociados a un usuario especifico y se encargan de realizar tareas de bajo nivel.
+

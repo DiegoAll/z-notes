@@ -116,6 +116,13 @@ https://github.com/diego-all/worksh0p/blob/main/Makefile
 Hay uno en youtube pendiente
 
 
+### Kernel parameters
+
+
+    sysctl -a
+
+kernel.core_pattern = "value"
+
 
 ## References
 

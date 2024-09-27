@@ -18,6 +18,9 @@ magic numbers:
 
 
 
+
+coredump:
+
 mapa de memoria: 
 
 espacio de direcciones virtuales:
