@@ -37,3 +37,10 @@
 
 
     /bin/bash -c (interactive shell) proceso hijo recordar EN el mismo contexto
+
+
+    cat /proc/self/status  (Se puede ver si se es root, tambien validar si estan todos los procesos)
+    ls /proc/self/ns -lia  (Each virtual file abovedesignates a different kernel namespace, witha total of seven namespaces ipc:[35343="inode"])
+
+
+    pscap ?
