@@ -21,7 +21,7 @@ trin
     docker run -d -it --net host --pid host --userns host --privileged --cap-add=ALL --name broken-cgroup1 ubuntu:22.04 sleep 36000
 
     docker run --pid=host --privileged --name admin-container ubuntu:latest tail -f /dev/null
-
+    docker run -t -d -p 127.0.0.1:9980:9980 -e 'domain=cloud\\.nextcloud\\.com' --restart always --cap-add MKNOD collabora/code
 
 
 iso a tarballs

@@ -11,4 +11,5 @@ Ping Scan
     nmap -sP 10.0.1.30-40
 
 
+nmap -p- --min-rate 10000 <IP>
 
