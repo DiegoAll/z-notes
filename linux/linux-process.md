@@ -1,7 +1,7 @@
 # Procesos
 
-    ps -ef
-
+    ps -ef (STIME)
+    ps -aef
     ps -x
 
     ps -u mister procesos siendo ejecutados por el usuario mister

@@ -16,6 +16,60 @@
     ls -lhai (inode)
 
 
+
+
+## Devices
+
+   0    Unnamed devices (e.g. non-device mounts)
+
+		  0 = reserved as null device number
+		See block major 144, 145, 146 for expansion areas.
+
+   1 char	Memory devices
+
+		  1 = /dev/mem		Physical memory access
+		  2 = /dev/kmem		OBSOLETE - replaced by /proc/kcore
+		  3 = /dev/null		Null device
+		  4 = /dev/port		I/O port access
+		  5 = /dev/zero		Null byte source
+		  6 = /dev/core		OBSOLETE - replaced by /proc/kcore
+		  7 = /dev/full		Returns ENOSPC on write
+		  8 = /dev/random	Nondeterministic random number gen.
+		  9 = /dev/urandom	Faster, less secure random number gen.
+		 10 = /dev/aio		Asynchronous I/O notification interface
+		 11 = /dev/kmsg		Writes to this come out as printk's, reads
+					export the buffered printk records.
+		 12 = /dev/oldmem	OBSOLETE - replaced by /proc/vmcore
+
+   1 block	RAM disk
+
+		  0 = /dev/ram0		First RAM disk
+		  1 = /dev/ram1		Second RAM disk
+		    ...
+		250 = /dev/initrd	Initial RAM disk
+
+		Older kernels had /dev/ramdisk (1, 1) here.
+		/dev/initrd refers to a RAM disk which was preloaded
+		by the boot loader; newer kernels use /dev/ram0 for
+		the initrd.
+
+   2 char	Pseudo-TTY masters
+
+		  0 = /dev/ptyp0	First PTY master
+		  1 = /dev/ptyp1	Second PTY master
+		    ...
+		255 = /dev/ptyef	256th PTY master
+
+   4 char	TTY devices
+
+		  0 = /dev/tty0		Current virtual console
+
+		  1 = /dev/tty1		First virtual console
+
+
+
+https://github.com/torvalds/linux/blob/master/Documentation/admin-guide/devices.txt
+
 ## Shells
 
     /etc/shell
@@ -24,8 +78,9 @@
     /bin/bash -c (interactive shell)
   
 
-    El raro para el entorno cuando se monta un File system como un virtual enviroment
+    El raro para el entorno cuando se monta un File system como un virtual enviroment  chroot
 
+    /bin/bash -p   (Preservar trabajos en segundo plano. Trabajos continuan ejecutandose en shell padre)
 
 bas, rbash (restricted bash)
 
