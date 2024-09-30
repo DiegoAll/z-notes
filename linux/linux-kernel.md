@@ -24,7 +24,7 @@ https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
     sudo rmmod hello_world_mod
 
 
-
+    dkms, insmod, modprobe, modinfo
 
 ## In kubernetes
 
@@ -122,6 +122,9 @@ Hay uno en youtube pendiente
     sysctl -a
 
 kernel.core_pattern = "value"
+
+
+net.ipv4*
 
 
 ## References

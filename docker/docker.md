@@ -23,6 +23,7 @@ trin
     docker run --pid=host --privileged --name admin-container ubuntu:latest tail -f /dev/null
     docker run -t -d -p 127.0.0.1:9980:9980 -e 'domain=cloud\\.nextcloud\\.com' --restart always --cap-add MKNOD collabora/code
     docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE --user=nobody nordvpn
+    sudo docker run -it --rm --security-opt apparmor=unconfined ubuntu bash
 
 
 
