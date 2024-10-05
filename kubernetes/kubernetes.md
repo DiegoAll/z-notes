@@ -29,6 +29,7 @@
 
     kubectl get pod -o wide (Permite ver las IPs)
     kubectl get po --show-labels
+    kubectl exec -it test -- /bin/bash
 
 
     kubectl run -i --tty --privileged --image diegoall1990/falco-workshop:0.0.1 vistima
