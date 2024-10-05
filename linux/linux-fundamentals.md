@@ -174,6 +174,9 @@ Extraer version de paquete
     grep -B 3 -A 5 "Disallowed SSH Connection" falco_rules.yaml
     zgrep
 
+    find
+    findstr
+
 
 ## Monitoring
 

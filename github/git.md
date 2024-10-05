@@ -26,6 +26,12 @@
     Squash and Merge
 
 
+    git checkout --values.yaml (Descartar cambios)
+
+
+
 ## Referencias
 
     https://git-scm.com/book/es/v2/Fundamentos-de-Git-Etiquetado
+
+

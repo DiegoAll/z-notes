@@ -25,7 +25,7 @@ trin
     docker run --cap-drop=ALL --cap-add=NET_BIND_SERVICE --user=nobody nordvpn
     sudo docker run -it --rm --security-opt apparmor=unconfined ubuntu bash
 
-
+    docker run -v /:/mnt --rm -it alpine chroot /mnt sh 
 
 iso a tarballs
 

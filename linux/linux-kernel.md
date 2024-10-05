@@ -26,6 +26,24 @@ https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
 
     dkms, insmod, modprobe, modinfo
 
+
+## Kernel parameters
+
+    /etc/sysctl.conf
+    sysctl -p
+    sysctl -w kernel.core_pattern 
+    sysctl net.ipv4.ip_forward=1
+
+    sysctl -w kernel.sysrq=1  "System Request" a.k.a Magic Keys  (Also Can be used using a specific keyboard sequence)
+    more /proc/sys/kernel/sysrq
+
+
+## Shared libraries
+
+    readelf (magic numbers)
+    ldd
+
+
 ## In kubernetes
 
 Recordar injectar LKM con insmod, falla por kernel-headers, quiza esten en el nodo y no en el pod.
