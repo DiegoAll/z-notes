@@ -47,6 +47,10 @@
 
     kubectl -c zapp -i -t (when the pod is running)  Attachear
 
+    (Pod with 2 containers principal and secondary)
+    kubectl exec -it falco-custom-pod --container=fedora-custom -- /bin/bash
+    kubectl exec -it falco-custom-pod --container=fedora-custom cat /etc/os-release
+
 
 
 

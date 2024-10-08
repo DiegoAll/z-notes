@@ -44,3 +44,10 @@
 
 
     pscap ?
+
+    escapado de caracteres especiales
+    $$$$ (doble escapado)
+    expansion de shell (se expande auytomaticamente al pid del proceso actual)
+    pid="$$$$"
+
+
