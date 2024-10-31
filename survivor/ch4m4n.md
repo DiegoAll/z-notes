@@ -10,3 +10,8 @@
 - Validar la version del kernel
 
 - 
+
+
+Referencia jaeles scanner
+
+habia otro

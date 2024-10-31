@@ -14,6 +14,8 @@
 ## Files
 
     ls -lhai (inode)
+    type -a ls
+    which -a ls
 
 
 
