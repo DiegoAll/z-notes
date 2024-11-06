@@ -340,7 +340,16 @@ https://rpubs.com/ricardo/14631
 
 
 
+Timeline
 
+    2020-11-??: Discover SecureJoinVFS() comment
+    2020-12-26: Initial report to security@opencontainers.org (Merry Christmas :) )
+    2020-12-27: Report acknowledgment
+    2021-03-06: Report to Google for their new GKE Autopilot
+    2021-04-07: Got added to discussions around the fix
+    2021-04-08: Google bounty :) (to be donated to Handicap International)
+    2021-05-19: End of embargo, advisory published on GitHub and on OSS-Security
+    2021-05-30: Write-up + POC public
 
 
 
