@@ -51,6 +51,8 @@
     kubectl exec -it falco-custom-pod --container=fedora-custom -- /bin/bash
     kubectl exec -it falco-custom-pod --container=fedora-custom cat /etc/os-release
 
+    kubectl run -i --tty --image kalilinux/kali-rolling sneaky
+
 
 
 

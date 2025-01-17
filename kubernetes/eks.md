@@ -2,4 +2,4 @@
 
 
 
-https://github.com/aws/aws-eks-best-practices
+https://github.com/aws/aws-eks-best-practices (custom rules topics)
