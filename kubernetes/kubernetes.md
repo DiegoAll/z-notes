@@ -5,6 +5,12 @@
 
 #
 
+
+## Cluster
+
+    kubectl cluster-info dump
+    kubectl cluster-info dump | grep 'ip-x-x-x-x.ec2.internal'
+
 ## Contexts
 
     kubectl config
@@ -46,6 +52,7 @@
     kubectl port-forward zapp 8080:8080
 
     kubectl -c zapp -i -t (when the pod is running)  Attachear
+    Session ended, resume using 'kubectl attach sneaky -c sneaky -i -t' command when the pod is running
 
     (Pod with 2 containers principal and secondary)
     kubectl exec -it falco-custom-pod --container=fedora-custom -- /bin/bash

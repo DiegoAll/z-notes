@@ -2,3 +2,5 @@
 
 
     cvefeed.io
+    vulmon.com
+    vulert.com
