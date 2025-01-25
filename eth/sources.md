@@ -21,3 +21,37 @@
 
 pentestmonkey.net (Viejo)
 rastamouse o _rastamouse
+
+
+
+https://github.com/AlexisAhmed/BugBountyToolkit  listado *
+https://github.com/FishermansEnemy/bucket_finder
+https://github.com/kh4sh3i/cloud-penetration-testing
+https://github.com/epinna/tplmap
+
+
+# labs and cloud
+
+https://github.com/RhinoSecurityLabs/cloudgoat
+https://github.com/OWASP/Serverless-Goat
+https://github.com/RhinoSecurityLabs/Security-Research/blob/master/tools/aws-pentest-tools/aws_escalate.py
+https://github.com/OWASP/DVSA
+
+https://thunder-ctf.cloud/
+
+https://gcpgoat.joshuajebaraj.com/ INTERESANTE HTML
+
+
+https://www.sans.org/cyber-security-courses/cloud-penetration-testing/   Syllabus
+https://www.sans.org/blog/
+
+
+
+    https://github.com/4ARMED/kubeletmein
+
+
+    https://github.com/madhuakula/hacker-container
+
+    https://github.com/kh4sh3i/cloud-penetration-testing
+
+

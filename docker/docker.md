@@ -96,6 +96,21 @@ Extraidos de csysdig
 
 
 
+    docker run --rm -i -t --entrypoint=/bin/bash   // sobrescribir el entrypoint predeterminado definido en la imagen.
+
+    Diferencia entre --entrypoint y CMD:
+    CMD: Define el comando predeterminado que se ejecutará al iniciar el contenedor, pero puede ser sobrescrito cuando se ejecuta docker run con un comando explícito.
+    --entrypoint: Reemplaza completamente el entrypoint predeterminado, dejando a CMD (si existe) o el argumento de docker run como el comando a ejecutar.
+
+
+
+    docker run --rm -i -t ubuntu bash -c "echo 'Hello from Docker!'"
+    docker run --rm --entrypoint=/usr/bin/env ubuntu
+    docker run --rm -i -t --entrypoint=/usr/bin/env ubuntu bash /scripts/myscript.sh
+    docker run --rm -i -t --entrypoint=/usr/bin/env ubuntu python3 /scripts/myscript.py
+
+
+
 
 
     docker info
