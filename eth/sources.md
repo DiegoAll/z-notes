@@ -55,3 +55,52 @@ https://www.sans.org/blog/
     https://github.com/kh4sh3i/cloud-penetration-testing
 
 
+   https://hackingthe.cloud/   **
+
+
+
+  ## S3 buckets
+
+     https://buckets.grayhatwarfare.com/
+
+    https://github.com/mxm0z/awesome-sec-s3 
+    https://github.com/nagwww/s3-leaks
+
+
+    https://github.com/jordanpotti/CloudScraper
+
+
+    https://github.com/andresriancho/enumerate-iam
+
+
+
+    awseye.com (es como un haveibeenpwned)
+
+
+    cloudsploit (aqua)
+
+    https://github.com/aquasecurity/cloudsploit
+    https://github.com/nccgroup/ScoutSuite
+    https://github.com/duo-labs/cloudmapper
+    https://github.com/gruntwork-io/cloud-nuke
+    https://aws.amazon.com/es/security-hub/
+    https://github.com/trufflesecurity/trufflehog
+    https://github.com/Checkmarx/kics
+    https://github.com/RhinoSecurityLabs/pacu   *
+    https://github.com/andresriancho/nimbostratus
+
+
+    https://hackingthe.cloud/
+
+    https://github.com/dagrz/aws_pwn
+
+    https://github.com/toniblyx/my-arsenal-of-aws-security-tools
+
+
+
+
+
+
+
+
+
