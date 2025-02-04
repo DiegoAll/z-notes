@@ -200,7 +200,8 @@ Extraer version de paquete
 
     tar xzvf
     untar
-    zip 
+    zip
+    zip -r ~/Desktop/proyecto.zip ~/Desktop/proyecto
     bzcat
     zcat
     bzmore
