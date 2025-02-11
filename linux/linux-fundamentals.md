@@ -19,6 +19,14 @@
 
 
 
+## Core utils
+
+coreutils es un paquete que contiene herramientas esenciales como ls, cat, echo, rm, etc.
+
+    dpkg -l | grep coreutils
+    ls --version
+
+
 
 ## Devices
 

