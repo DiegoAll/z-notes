@@ -25,6 +25,14 @@ Monitoring
     ip addr
     ip a
     hostname -I ; -i
+    ip -s -s neigh flush all  (limpiar ARP cache)
+
+
+
+    ls -lha /etc/NetworkManager/system-connections/*
+    grep -i 'psk' /etc/NetworkManager/system-connections/* (Obtener WIFI passwords)
+    
+
     
 
 ## tcpdump
