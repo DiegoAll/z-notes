@@ -32,6 +32,7 @@ Monitoring
     ls -lha /etc/NetworkManager/system-connections/*
     grep -i 'psk' /etc/NetworkManager/system-connections/* (Obtener WIFI passwords)
     
+    nmcli connection show
 
     
 

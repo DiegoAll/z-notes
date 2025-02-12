@@ -26,8 +26,16 @@
     kubectl get node  (Ver nodos)
     kubectl get no -o yaml
     kubectl get no -o wide
-    kubectl describe node
+    kubectl describe node (*)
     kubectl top node
+    kubectl explain <Object|node>
+
+    kubectl get nodes: lista todos los nodos que tiene nuestro cluster
+kubectl --config: puedes pasarle el archivo de configuración en caso de estar usando uno diferente.
+kubectl --server --user: especificas la configuración sin necesidad de darle un archivo.
+kubectl get nodes -a wide: muestra más datos de los nodos
+kubectl describe nodes node1: da mucha información de ese nodo en especifico.
+kubectl explain node: permite ver la definición de todo lo relacionado a ese nodo
 
 ## Pods
 
