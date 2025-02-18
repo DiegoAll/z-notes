@@ -182,6 +182,8 @@ Extraer version de paquete
 ## Grep
 
     grep -B 3 -A 5 "Disallowed SSH Connection" falco_rules.yaml
+    grep -rl 'dockerfile: dockerfile' --include=docker-compose.yml .
+
     zgrep
 
     find

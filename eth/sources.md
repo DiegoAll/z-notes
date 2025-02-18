@@ -109,6 +109,10 @@ https://www.sans.org/blog/
 
 
 
+    https://github.com/infodox/python-pty-shells
+
+
+
 
 
 
