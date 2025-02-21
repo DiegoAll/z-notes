@@ -16,3 +16,8 @@ https://www.youtube.com/watch?v=oTf0KxK1QNo&list=PLqRCtm0kbeHA5M_E_Anwu-vh4NWlgr
 
 roles por configmap
 otra de AWS
+
+
+# MITRE
+
+    https://kubernetes-threat-matrix.redguard.ch/

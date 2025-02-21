@@ -15,3 +15,15 @@
 Referencia jaeles scanner
 
 habia otro
+
+
+habia un escanner API + CLI
+sudo killer
+
+versiones
+
+
+PrivilegeEscalation
+
+
+Kubernetes

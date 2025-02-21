@@ -8,6 +8,7 @@
 
         arch
         lsb_release -a  version
+        lsb_release -drc
         /cat/etc/issue version exacta del SO
 
 

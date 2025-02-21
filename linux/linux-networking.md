@@ -20,7 +20,13 @@ Monitoring
 
     bmon
 
+Ver dirección IP Pública
+
     curl ifconfig.me
+    curl -4 -s https://ifconfig.me
+    curl -s https://api.ipify.org
+    curl -s https://checkip.amazonaws.com
+
 
     ip addr
     ip a

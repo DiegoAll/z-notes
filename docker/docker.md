@@ -11,6 +11,16 @@
     #   $ docker run -it --name <name> -h <hostname> diegoall1990/falco-workshop:tagname
     #   $ docker run -it --name falco-workshop -h training diegoall1990/falco-workshop:tagname
 
+
+
+    docker pull golang
+    docker ps -l
+    docker run --rm -dti --net host --name host --name golang golang bash
+    docker rm -fv 88ac6b0b29df
+
+    docker build -t k8s-hands-on:0.0.1 -f Dockerfile .
+    docker run -d -p 9001:9001 --name k8s-hands-on k8s-hands-on
+    docker rm -fv k8s-hands-on  (Buena practica recomendado)
     
 
 trin
@@ -45,6 +55,10 @@ guido
     docker exec -it -u pepe 52753da1adc0 /bin/bash
 
     docker exec -it <nombre_del_contenedor> bash -c "echo 'pepe ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers"
+
+    docker exec -it -u 0 containerName /bin/bash
+
+
 
 
 
@@ -135,3 +149,9 @@ To back up docker images, use the docker save command that will produce a tar ar
     docker load <>
 
 Reference: https://stackoverflow.com/questions/26331651/how-can-i-backup-a-docker-container-with-its-data-volumes
+
+
+    docker commit 
+
+
+
