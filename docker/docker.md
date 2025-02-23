@@ -58,8 +58,9 @@ guido
 
     docker exec -it -u 0 containerName /bin/bash
 
-
-
+    docker exec -it products_pg_db psql -U postgres -d e_commerce
+    
+    docker exec -it mysql-server mysql -h 127.0.0.1 -P 3306 -u user -p
 
 
     
@@ -155,3 +156,4 @@ Reference: https://stackoverflow.com/questions/26331651/how-can-i-backup-a-docke
 
 
 
+    https://quickref.me/docker

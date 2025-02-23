@@ -48,6 +48,8 @@ kubectl explain node: permite ver la definición de todo lo relacionado a ese no
 
     kubectl run -i --tty --privileged --image diegoall1990/falco-workshop:0.0.1 vistima
     kubectl run -i --tty --privileged --image ubuntu:22.04 --name ubuntu-container
+    kubectl run [pod_name] --image=busybox --rm -it --restart=Never --sh
+
 
 
 
@@ -91,9 +93,16 @@ kubectl explain node: permite ver la definición de todo lo relacionado a ese no
 
 ## Events
 
+    kubectl get events
+    kubectl get events -w
+
+
 
 
 ## Logs
+
+    kubectl logs --since=1h [pod_name]
+    kubectl logs --tail=20 [pod_name]
 
 
 
@@ -123,7 +132,10 @@ kubectl explain node: permite ver la definición de todo lo relacionado a ese no
 ## Persistent Volume Claim
 
 
-## 
+## Miscellaneous
+
+    kubectl get componentstatus
+
 
 
 
@@ -164,3 +176,11 @@ O USAR UN MANIFIESTO
         - containerPort: 80
         securityContext:
         runAsUser: 41
+
+
+
+## References
+
+
+
+    https://quickref.me/kubernetes

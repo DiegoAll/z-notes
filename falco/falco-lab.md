@@ -11,3 +11,12 @@ Port forward
 
 
 
+# Falco Lab en GCP
+
+
+Acceso
+
+    ssh -i /home/<user>/.ssh/gcp/gcp_<user> <user>@<IP>
+
+
+
