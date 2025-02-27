@@ -73,6 +73,10 @@ guido
 
     docker tag <IMAGE ID> <NEW_REPOSITORY>:<NEW_TAG>
 
+    docker login -u <username>
+    more ~/.docker/config.json
+    echo "dfsdafsdfsdfsdafdsfsdaff" | base64 -d   (Basic Auth) codificada en Base64.
+
 
 
 
