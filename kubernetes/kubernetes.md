@@ -184,3 +184,5 @@ O USAR UN MANIFIESTO
 
 
     https://quickref.me/kubernetes
+
+    https://collabnix.github.io/kubetools/#Pods

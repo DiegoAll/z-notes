@@ -19,3 +19,8 @@ Remover background o cambiar de color
 
     https://toolbox.googleapps.com/apps/screen_recorder/
 
+
+
+# Terminals
+
+    https://asciinema.org/

@@ -30,3 +30,7 @@
 - merlin y otros
 
 - The tangled web (MIchal Zalewski)
+
+- How to hack like a Ghost (Spark flow)
+
+- Cloud Native Security (Chris Binnie, Rory McCune)
