@@ -24,3 +24,9 @@ Remover background o cambiar de color
 # Terminals
 
     https://asciinema.org/
+
+
+
+# Emojis
+
+    https://emojipedia.org/es/rombo-azul-peque%C3%B1o
