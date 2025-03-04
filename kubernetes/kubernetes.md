@@ -69,6 +69,7 @@ kubectl explain node: permite ver la definición de todo lo relacionado a ese no
     kubectl exec -it falco-custom-pod --container=fedora-custom cat /etc/os-release
 
     kubectl run -i --tty --image kalilinux/kali-rolling sneaky
+    kubectl run -i --tty --privileged --image kalilinux/kali-rolling sneaking
 
 
 

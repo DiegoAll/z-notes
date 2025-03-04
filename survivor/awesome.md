@@ -10,3 +10,5 @@
     https://github.com/Metarget/awesome-cloud-security 
 
     https://github.com/RoseSecurity/Red-Teaming-TTPs/
+
+    https://github.com/Metarget/awesome-cloud-native-security
