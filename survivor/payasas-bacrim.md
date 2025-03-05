@@ -36,3 +36,10 @@ https://hub.docker.com/r/bitnami/debian-base-buildpack
 
     docker pull bitnami/debian-base-buildpack
 
+
+
+
+    eval "$(ssh-agent -s)"
+    ssh-add <keypath>
+    ssh-add -l
+
