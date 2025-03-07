@@ -20,3 +20,9 @@
     https://github.com/kabachook/k8s-security/blob/master/ATTACKER.md
 
     https://www.eksworkshop.com/docs/security/guardduty/log-monitoring/privileged_container_mount
+
+    https://www.theoffensivelabs.com/courses/hacking-and-securing-kubernetes-clusters/lectures/20458311
+
+    https://go.sysdig.com/kraken-discovery-labs-falco
+
+    https://docs.sysdig.com/en/docs/release-notes/falco-rules-changelog/
