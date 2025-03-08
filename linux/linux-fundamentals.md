@@ -1,5 +1,7 @@
 # Linux fundamentals
 
+    sudo lshw -short -C memory
+    lscpu
 
 
 
