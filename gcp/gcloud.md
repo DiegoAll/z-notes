@@ -1,6 +1,14 @@
 # gcloud SDK
 
     gcloud config get-value account
+    gcloud config get-value project
+    export PROJECT_ID=$(gcloud config get-value project)   (nano ~/.bashrc; source ~/.bashrc)
+
+    if [ -f ~/.bashrc ]; then
+        source ~/.bashrc
+    fi
+
+
     gcloud config list
     gcloud auth list
 
@@ -98,7 +106,21 @@ xpnProjectStatus: UNSPECIFIED_XPN_PROJECT_STATUS
     gcloud services enable [API_NAME]      (Habilitar una API)
     gcloud services disable [API_NAME]    (Deshabilitar una API)
 
-## Desplegar aplicaciones 
+## Desplegar aplicaciones (App Engine)
+
+    gcloud app deploy
+    gcloud app browse
+
+## En general
+
+    gloud help
+    gcloud compute --help
+    gcloud compute instances describe [INSTANCE_NAME] --zone=[ZONE]  (Información de un recurso específico)
+
+
+
+
+
 
 
 
