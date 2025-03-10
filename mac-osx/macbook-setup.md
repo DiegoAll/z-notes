@@ -113,7 +113,15 @@ Mero rato pedaleando con la autneticacion
 ## Containers
 
     brew install colima
-    NAKA
+    
+    colima start --cpu 4 --memory 8 --mount-type 9p
+    colima status
+    docker context use colima
+    docker run hello-world
+
+
+    colima delete default
+    colima list
 
 
 ## privateRepos
@@ -152,7 +160,33 @@ Diferencias con Linux: En distribuciones de Linux, el archivo ~/.bashrc se usa p
 
 ## Python
 
-    done
+    Avoid using brew to manage Python versions.
+    
+    brew install pyenv
+
+CLI
+
+Power Ranger will use an isolated virtual environment for the CLI installation regardless.
+
+65  brew update git
+   66  brew upgrade git
+   67  git --version
+   68  ls -lha ~/.gitconfig
+   69  more ~/.gitconfig
+   70  cd ~/.gitconfig
+   71  ls
+   72  cd ~/.gitconfig
+   73  more ~/.gitconfig
+   74  brew update
+   75  brew doctor
+   76  brew install git
+
+
+recordar que apple trae una version de git propia, es encesario sobreescribirla
+
+BURI INSTALL
+
+
 
 ## Golang
 
