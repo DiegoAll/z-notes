@@ -1,6 +1,22 @@
 # Google Kubernetes Engine
 
+
+> GKE Public cluster | GKE Private cluster
+
+
+Standard|Autopilot Cluster
+
+
+
 Para crear un cluster:
+
+Habilitar la API de contenedores
+
+gcloud services enable container.googleapis.com --project $PROJECT_ID
+gcloud services enable cloudtrace.googleapis.com --project $PROJECT_ID
+gcloud services enable cloudtrace.googleapis.com --project $PROJECT_ID
+gcloud services enable clouddebugger.googleapis.com --project $PROJECT_ID
+gcloud services enable cloudprofiler.googleapis.com --project $PROJECT_ID
 
 1. Consola de Google Cloud (UI Web)
 2. gcloud CLI (Línea de comandos)
@@ -164,7 +180,71 @@ Configuración manual de node_config
 
 
 
+### Viabilidad
+
+| Instancia         | vCPU | RAM   | Tipo CPU  | ¿CPU dedicada? | Uso recomendado                                   |
+|-------------------|------|-------|-----------|----------------|--------------------------------------------------|
+| e2-small          | 0.5  | 2 GB  | Compartida| ❌              | Pruebas, bots, tareas muy ligeras                |
+| e2-medium         | 1    | 4 GB  | Compartida| ❌              | Apps ligeras, servicios básicos                 |
+| e2-standard-2     | 2    | 8 GB  | Completa  | ✅              | Apps medianas, backend con tráfico moderado    |
+| e2-standard-4     | 4    | 16 GB | Completa  | ✅              | Apps más exigentes, bases de datos pequeñas     |
+
+
+**e2-medium**: Sí, es viable para ciertos escenarios, pero con limitaciones que debes considerar según la carga de trabajo del cluster.
+
+**Ventajas**: Bajo costo, suficiente para microservicios sencillos, escalado flexible.
+
+**Limitaciones y riesgos**: 
+
+* CPU compartida (no garantizada):
+
+* En momentos de alta demanda en la zona o nodo, Google puede reducir la CPU disponible a tus instancias.
+Esto impacta directamente la latencia y desempeño de tus pods.
+
+
+Si tienes APIs críticas, workloads intensivos o latencia sensible, NO es recomendable.
+Problemas típicos: pods lentos, timeouts, cuellos de botella.
+Menos memoria (4 GB):
+
+En clusters donde los pods requieren más memoria (por ejemplo, apps Java, bases de datos, o servicios de IA), se quedará corto.
+
+**Falco**
+
+🔑 Consideraciones específicas para Falco:
+Falco es un DaemonSet → 1 pod por nodo.
+Cada agente de Falco va a consumir recursos continuamente, ya que está analizando eventos del kernel (syscalls).
+Aunque Falco no consume excesiva CPU o RAM, sí necesita estabilidad, porque debe reaccionar rápido a eventos (detección en tiempo real).
+
+
+| **Requisito**                                          | **Riesgo con e2-medium**                                                                                             |
+|--------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| CPU estable para syscalls continuos                    | CPU compartida → puede provocar retrasos en la detección de amenazas si hay otros pods consumiendo recursos.         |
+| Memoria adecuada para Falco y sus buffers              | Con 4 GB por nodo, debes contar cuánto RAM consumen tus apps y Falco. En clústeres con apps exigentes, puede quedarse corto. |
+| Latencia mínima en detección                           | Si hay contention por CPU, puede afectar la velocidad con la que Falco analiza los eventos.                           |
+
+
+
+
+
 ## References
 
 
 https://cloud.google.com/compute/docs/general-purpose-machines?hl=es-419
+
+
+
+# 
+
+      check-autopilot-compatibility  Check autopilot compatibility of a running
+                                     cluster.
+      create                         Create a cluster for running containers.
+      create-auto                    Create an Autopilot cluster for running
+
+      upgrade                        Upgrade the Kubernetes version of an
+                                existing container cluster.
+
+
+    gcloud services enable compute.googleapis.com
+    gcloud services enable container.googleapis.com
+
+    gcloud container clusters list

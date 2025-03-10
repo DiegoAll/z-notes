@@ -47,7 +47,7 @@ Cambiar entre configuraciones  (LUEGO)
     gcloud components update (Puede tardas unos minutos)
     gcloud config list project
     gcloud config get-value compute/zone   (https://gcping.com/)
-    gcloud config set compute/zone us-east1-b (South Carolina)
+    gcloud config set compute/zone us-east1-b (South Carolina) us-east-4 (North Virginia)  ("Principal" Popular y antigua us-central1 - Iowa)
     gcloud config list
     gcloud compute project-info describe
 
@@ -120,7 +120,9 @@ xpnProjectStatus: UNSPECIFIED_XPN_PROJECT_STATUS
 
 
 
+# Network
 
+    gcloud compute networks list
 
 
 
