@@ -43,3 +43,22 @@ https://hub.docker.com/r/bitnami/debian-base-buildpack
     ssh-add <keypath>
     ssh-add -l
 
+
+    $ ssh-keygen -t rsa -b 4096 -C email
+
+    -t: Algoritmo para crear la llave.
+    -b: complejidad
+    -C: email conectado a la llave
+    Con que usuario fue creada una llave
+
+    $ cat /Users/mac/.ssh/id-rsa.pub
+    Agregar al agente SSH
+
+    $ eval ”$(ssh-agent -s)”
+    $ ssh-add -k /.ssh/id-rsa (-k keychain MacOSX)
+    Configurar llave p´ublica en Github
+    pbcopy ¡ /.ssh/id rsa.pub (Mac OS)
+    cat gcp-dposada.pub — pbcopy
+    clip (Windows)
+
+    ssh override

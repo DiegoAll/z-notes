@@ -164,6 +164,8 @@ Extraer version de paquete
     export
     unset
     source
+    source script.sh
+    echo $$
 
 
     

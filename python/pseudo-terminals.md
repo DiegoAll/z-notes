@@ -22,3 +22,6 @@
     python3 -c 'import pty; pty.spawn("/bin/bash")'
     perl -e 'exec "/bin/sh";'
 
+
+
+    python -i script.py
