@@ -156,6 +156,7 @@ Extraer version de paquete
     source ~/.bashrc
     export x=5 ; echo $x (Actual process memory and child processes)
     env
+    launchctl
 
     cat /etc/environment
 

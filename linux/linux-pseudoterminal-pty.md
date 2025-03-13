@@ -25,3 +25,8 @@ https://steflan-security.com/
 https://indico.egi.eu/event/452/contributions/10516/attachments/10191/11743/20110923-rootkits_tty_hijacking-lyon.pdf
 
 
+
+    shopt -q login_shell && echo 'Login shell' || echo 'No login shell' (verificar que archivos carga bash)
+    bash --login -x
+
+    chsh -s /bin/bash

@@ -7,6 +7,7 @@
 Desinstalar drivers instalados para apps inutiles ej obs
 
     kazam si sirvio
+    blue recorder (mala resolución)
 
 
 Remover background o cambiar de color
@@ -25,6 +26,10 @@ Remover background o cambiar de color
 
     https://asciinema.org/
 
+
+# Word clouds
+
+    wordle_windows_0_2.exe (onedrive)
 
 
 # Emojis
