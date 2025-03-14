@@ -26,3 +26,5 @@
     https://go.sysdig.com/kraken-discovery-labs-falco
 
     https://docs.sysdig.com/en/docs/release-notes/falco-rules-changelog/
+ 
+    https://github.com/fijimunkii/bash-dev-tcp
