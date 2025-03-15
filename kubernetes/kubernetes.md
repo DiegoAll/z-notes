@@ -40,7 +40,8 @@
 ## Pods
 
     kubectl get pods -l app=postgres
-    watch kubectl get pods 
+    watch kubectl get pods
+    kubectl get pods -v=9
 
     kubectl get pod -o wide (Permite ver las IPs)
     kubectl get po --show-labels

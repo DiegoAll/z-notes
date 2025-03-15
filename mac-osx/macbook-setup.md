@@ -51,6 +51,9 @@ Detalles okta -jamf connect -
     aws identity center
     https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html (console access) (INstall 4 all users)
     /usr/local/aws-cli
+    ~/.aws/config
+
+    "Los contextos son locales, configurar el perfil para utilizar SSO"
 
     aws configure sso (choose account, role & profile)
     aws sso login --profile <ProfileName>
@@ -101,11 +104,12 @@ Mero rato pedaleando con la autneticacion
 
     kubectl config set-context --current --user=oidc
 
+    aws sts get-caller-identity --profile PS_OXEC-5345345345 (Siempre el profile en los comandos)
 
 **Summary S3b45**
 
     aws sso login --profile <ProfileName>
-    aws eks --profile <ProfileName> --region us-east-1 update-kubeconfig --name <ClusterName>
+    aws eks --profile <ProfileName> --region us-east-1 update-kubeconfig --name <ClusterName>  (kubectl config view)
     kubectl config set-context --current --user=oidc
 
 
