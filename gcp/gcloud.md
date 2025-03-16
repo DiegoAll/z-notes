@@ -51,6 +51,8 @@ Cambiar entre configuraciones  (LUEGO)
     gcloud config list
     gcloud compute project-info describe
 
+    gcloud info --run-diagnostics
+
 https://www.googleapis.com/compute/v1/projects/
 vmDnsSetting: ZONAL_ONLY
 xpnProjectStatus: UNSPECIFIED_XPN_PROJECT_STATUS
@@ -123,6 +125,8 @@ xpnProjectStatus: UNSPECIFIED_XPN_PROJECT_STATUS
 # Network
 
     gcloud compute networks list
+
+    
 
 
 
