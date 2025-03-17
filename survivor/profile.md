@@ -1,6 +1,6 @@
 # Profile
 
-
+## Linked in
 
 Software Architect | Software Engineer | Software Developer | Cyber Engineer | Ethical Hacker | DevSecOps | Golang | Python | Vue.js | Kubernetes | Docker | Google Cloud | Information Management
 
@@ -20,3 +20,9 @@ Software Architect | Software Engineer | Software Developer | Ethical Hacker | D
 
 Formato con Prioridad en Tecnologías (Si quieres resaltar habilidades técnicas)
 Golang | Python | Vue.js | Docker | Kubernetes | Google Cloud | Ethical Hacker | DevSecOps | Software Developer | Software Engineer | Software Architect
+
+
+
+## Creedly
+
+    https://info.credly.com/
