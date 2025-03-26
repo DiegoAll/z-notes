@@ -42,6 +42,7 @@
     kubectl get pods -l app=postgres
     watch kubectl get pods
     kubectl get pods -v=9
+    kubectl get po --show-labels
 
     kubectl get pod -o wide (Permite ver las IPs)
     kubectl get po --show-labels
@@ -72,6 +73,12 @@
 
     kubectl run -i --tty --image kalilinux/kali-rolling sneaky
     kubectl run -i --tty --privileged --image kalilinux/kali-rolling sneaking
+    kubectl run -i --tty --image ne0nd0g/merlin merlinsky bash
+
+    kubectl run -i --tty --image ne0nd0g/merlin merlinsky bash
+
+
+    --c ejecutar un comando 
 
 
 
@@ -106,6 +113,17 @@
 
     kubectl logs --since=1h [pod_name]
     kubectl logs --tail=20 [pod_name]
+    kubectl logs -fl app=release-name-falcoxec
+
+    kubectl get pods --show-labels
+    kubectl describe pod/<podName> | grep Labels:
+    kubectl logs -l app=falco
+    kubectl logs -l app.kubernetes.io/name=release-name-falco-obsec
+
+    
+
+    
+
 
 
 
