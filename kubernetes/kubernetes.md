@@ -77,6 +77,7 @@
 
     kubectl run -i --tty --image ne0nd0g/merlin merlinsky bash
 
+    kubectl run -i --tty --privileged --image kalilinux/kali-rolling irt-ignore
 
     --c ejecutar un comando 
 
@@ -113,14 +114,14 @@
 
     kubectl logs --since=1h [pod_name]
     kubectl logs --tail=20 [pod_name]
-    kubectl logs -fl app=release-name-falcoxec
+    kubectl logs -fl app=release-name-falcoxec  (***View logs from all pods at the same time)
 
     kubectl get pods --show-labels
     kubectl describe pod/<podName> | grep Labels:
     kubectl logs -l app=falco
     kubectl logs -l app.kubernetes.io/name=release-name-falco-obsec
 
-    
+
 
     
 

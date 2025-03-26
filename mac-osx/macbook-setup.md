@@ -111,6 +111,7 @@ Mero rato pedaleando con la autneticacion
     aws sso login --profile <ProfileName>
     aws eks --profile <ProfileName> --region us-east-1 update-kubeconfig --name <ClusterName>  (kubectl config view)
     kubectl config set-context --current --user=oidc
+    
 
 
 
