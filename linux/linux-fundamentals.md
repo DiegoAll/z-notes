@@ -120,6 +120,10 @@ whiptail  (cuadros de dialogo)
     apt-mark hold sudo
     apt-get install --reinstall sudo
 
+    apt-get install dpkg-dev
+    /var/log/apt/history.log
+    apt rdepends fakeroot
+
     dpkg -l | grep linux-headers
 
 
