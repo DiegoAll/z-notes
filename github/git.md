@@ -55,6 +55,8 @@
 
     git log -S "Por Contenido"   una línea de código que coincida con una cadena de texto especificada
 
+    git log -1;     git log -1 --oneline
+
 
     git grep [opciones] [patrón] [--] [archivos]     se utiliza para buscar patrones en los archivos de un repositorio
 
@@ -73,6 +75,7 @@
 
     git stash list
     git stash -u
+    
 
 
 ## Referencias

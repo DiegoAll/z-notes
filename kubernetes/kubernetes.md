@@ -163,6 +163,7 @@
 
 
     kubectl exec -it  jenkins-app-2843651954-4zqdp  -- /bin/bash
+    kubectl exec -it sneaking -- kzh -c "nmap -v"
 
 
 **CASO ESPECIAL**

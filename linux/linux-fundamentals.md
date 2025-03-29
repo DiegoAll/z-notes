@@ -126,6 +126,10 @@ whiptail  (cuadros de dialogo)
 
     dpkg -l | grep linux-headers
 
+    apt-file search /usr/lib/x86_64-linux-gnu/libm.so.6  (Utilidad por aparte)
+
+    kubectl run -i --tty --privileged --image kalilinux/kali-rolling sneaking
+
 
 Extraer version de paquete
 
@@ -133,6 +137,8 @@ Extraer version de paquete
     dpkg-repack sudo
 
     dpkg -S /usr/lib/x86_64/libgtk-3-common.so
+
+    
 
 
 
