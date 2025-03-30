@@ -77,6 +77,9 @@
     git stash -u
     
 
+    git rev-parse --show-toplevel  (Parent folders)
+
+
 
 ## Referencias
 
